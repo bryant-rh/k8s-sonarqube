@@ -17,7 +17,7 @@ spec:
     spec:
       initContainers:               #设置初始化镜像，执行 system 命令
       - name: init-sysctl
-        image: harbor.cechealth.cn/tools/busybox
+        image: harbor.example.cn/tools/busybox
         imagePullPolicy: IfNotPresent
         command: ["sysctl", "-w", "vm.max_map_count=262144"]  #必须设置vm.max_map_count这个值调整内存权限，否则启动可能报错
         securityContext:
@@ -25,7 +25,7 @@ spec:
       containers:
       - name: sonarqube
         #image: "sonarqube:7.9-community"
-        image: "harbor.cechealth.cn/tools/sonarqube:7.9.1-community"
+        image: "harbor.example.cn/tools/sonarqube:7.9.1-community"
         ports:
         - containerPort: 9000
         env:

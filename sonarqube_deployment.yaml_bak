@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: sonarqube
-        image: "harbor.cechealth.cn/tools/sonarqube:7.9.1-community"
+        image: "harbor.example.cn/tools/sonarqube:7.9.1-community"
         #imagePullPolicy: Always
         imagePullPolicy: IfNotPresent
         resources:
